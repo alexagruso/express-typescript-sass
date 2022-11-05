@@ -15,6 +15,8 @@ server.get("/", (req, res) => {
     res.render("home");
 });
 
-server.listen(8080, () => {
-    console.log("Listening to :8080");
+const port: number = parseInt(process.env.PORT!) || 8080;
+
+server.listen(port, () => {
+    console.log(`Listening on port ${port}`);
 });
