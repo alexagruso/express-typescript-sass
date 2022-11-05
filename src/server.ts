@@ -1,9 +1,9 @@
-import express from "express";
+import express, { Express, Request, Response } from "express";
 import path from "path";
 
 import ejsLayouts from "express-ejs-layouts";
 
-const server = express();
+const server: Express = express();
 
 server.use(express.static(path.resolve(__dirname, "../dist/public/")));
 server.use(ejsLayouts);
@@ -11,7 +11,7 @@ server.use(ejsLayouts);
 server.set("views", path.resolve(__dirname, "../public/views/"));
 server.set("view engine", "ejs");
 
-server.get("/", (req, res) => {
+server.get("/", (req: Request, res: Response) => {
     res.render("home");
 });
 
