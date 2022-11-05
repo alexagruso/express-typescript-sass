@@ -1,27 +1,27 @@
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "rootDir": "./src/",
-    "moduleResolution": "node",
-    "baseUrl": "./",
-    "paths": {
-      "@src/*": [
-        "./src/*"
-      ],
-      "@public/*": [
-        "./public/*"
-      ],
+    "compilerOptions": {
+        "target": "es2016",
+        "module": "commonjs",
+        "rootDir": "./src/",
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "paths": {
+            "@src/*": [
+                "./src/*"
+            ],
+            "@public/*": [
+                "./public/*"
+            ],
+        },
+        "outDir": "./dist/",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true
     },
-    "outDir": "./dist/",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "skipLibCheck": true
-  },
-  "exclude": [
-    "./public/*",
-  ],
+    "exclude": [
+        "./public/*",
+    ],
 }

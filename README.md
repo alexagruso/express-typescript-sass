@@ -22,9 +22,9 @@ Default template engine is `ejs` and default view folder is `public/views/`.
 
 ### Browser Scripts
 
-|        | File Location              | Config Location                |
-| ------ | -------------------------- | ------------------------------ |
-| Entry  | `public/scripts/*.ts`      | `public/scripts/tsconfig.json` |
-| Output | `dist/public/scripts/*.ts` | `public/scripts/tsconfig.json` |
+|        | File Location              | Config Location     |
+| ------ | -------------------------- | ------------------- |
+| Entry  | `public/scripts/*.ts`      | `webpack.config.js` |
+| Output | `dist/public/scripts/*.ts` | `webpack.config.js` |
 
 Typescript modules are compiled down to browser-compatible code through webpack and ts-loader.
