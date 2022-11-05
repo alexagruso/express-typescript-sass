@@ -27,4 +27,13 @@ body {
     max-height: 20vh;
     margin: 0 auto;
     margin-top: 5rem;
+
+    h1,
+    p {
+        color: $text-color;
+    }
+
+    a {
+        color: $text-color;
+    }
 }
