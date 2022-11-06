@@ -1,5 +1,5 @@
-$background-color: #c8c8e8;
-$text-color: #222;
+$background: #e8e8e8;
+$color: #383838;
 
 * {
     margin: 0;
@@ -12,28 +12,43 @@ html {
 }
 
 body {
-    background-color: $background-color;
+    background-color: $background;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
-    background-color: rgba($color: black, $alpha: 0.1);
-    padding: 2rem;
+    background-color: rgba(black, 0.1);
+    padding: 2rem 5rem;
+    margin-top: 10rem;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
-    max-width: 30vw;
-    border-radius: 1rem;
-    max-height: 20vh;
-    margin: 0 auto;
-    margin-top: 5rem;
+    gap: 1rem;
+    box-shadow: 0 0.25rem 0.25rem rgba(black, 0.3);
 
-    h1,
+    h1 {
+        color: $color;
+        font-size: 2rem;
+    }
+
     p {
-        color: $text-color;
+        color: $color;
+        font-size: 1.5rem;
     }
 
     a {
-        color: $text-color;
+        color: $color;
+        font-size: 1rem;
+        transition: 100ms;
+
+        &:hover {
+            text-shadow: 0 0 0.25rem rgba(black, 0.3);
+        }
+
+        &:active {
+            text-shadow: 0 0 0.25rem rgba(black, 0.5);
+        }
     }
 }

@@ -1,18 +1,20 @@
 import express, { Express, Request, Response } from "express";
 import path from "path";
-
 import ejsLayouts from "express-ejs-layouts";
+
+import { pageTitle } from "@src/test";
 
 const server: Express = express();
 
-server.use(express.static(path.resolve(__dirname, "../dist/public/")));
+server.set("view engine", "ejs");
+server.set("views", path.resolve(__dirname, "../public/views/"));
+
+server.use(express.static(path.resolve(__dirname, "../dist/public/styles/")));
+server.use(express.static(path.resolve(__dirname, "../dist/public/scripts/")));
 server.use(ejsLayouts);
 
-server.set("views", path.resolve(__dirname, "../public/views/"));
-server.set("view engine", "ejs");
-
 server.get("/", (req: Request, res: Response) => {
-    res.render("home");
+    res.status(200).render("home", { title: pageTitle });
 });
 
 const port: number = parseInt(process.env.PORT!) || 8080;
