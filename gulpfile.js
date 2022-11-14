@@ -54,6 +54,6 @@ gulp.task("dev", async () => {
     return nodemon({
         exec: "ts-node -r tsconfig-paths/register ./src/server.ts",
         ext: "ts, ejs",
-        watch: ["./src/**", "./public/views/**"],
+        watch: ["./src/**"],
     });
 });
